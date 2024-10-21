@@ -17,6 +17,7 @@
     "bootstrap": "^5.3.3",
     "moment": "^2.30.1",
     "monent": "^0.0.2-security",
+    "qs": "^6.13.0",
     "svelte-spa-router": "^4.0.1"
   }
 }
