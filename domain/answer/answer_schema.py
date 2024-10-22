@@ -1,6 +1,8 @@
 import datetime
-
 from pydantic import BaseModel, field_validator
+from domain.user.user_schema import User
+
+from typing import Optional, List
 
 class AnswerCreate(BaseModel):
     content: str
@@ -15,3 +17,16 @@ class Answer(BaseModel):
     id: int
     content: str
     create_date: datetime.datetime
+    user: 'Optional[User]'
+    question_id: int
+    modify_date: 'Optional[datetime.datetime]'
+    voter: List[User]=[]
+
+class AnswerUpdate(AnswerCreate):
+    answer_id:int
+
+class AnswerDelete(BaseModel):
+    answer_id: int
+
+class AnswerVote(BaseModel):
+    answer_id: int

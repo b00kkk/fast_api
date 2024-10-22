@@ -28,7 +28,7 @@ const fastapi=(operation,url,params,success_callback, failure_callback)=>{
 
     const _access_token = get(access_token)
     if (_access_token){
-        options.headers["Authorization"]="Bearer"+_access_token
+        options.headers["Authorization"]="Bearer "+_access_token
     }
 
     if (method !=='get'){

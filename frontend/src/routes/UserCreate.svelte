@@ -47,7 +47,7 @@
         </div>
         <div class="mb-3">
             <label for="email">이메일</label>
-            <input type="text" class="form-control" id="emai" bind:value="{email}">
+            <input type="text" class="form-control" id="email" bind:value="{email}">
         </div>
         <button type="submit" class="btn btn-primary" on:click="{post_user}">생성하기</button>
     </form>
